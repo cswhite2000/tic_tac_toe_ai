@@ -1,11 +1,11 @@
 from sklearn.neural_network import MLPClassifier
 from joblib import dump, load
-import pandas as pd
+# import pandas as pd
 
 clf = load("best.joblib")
-data = pd.read_csv("tictactoe.csv")
-x = data.iloc[:, :9]
-y = data.iloc[:, 9:]
+# data = pd.read_csv("tictactoe.csv")
+# x = data.iloc[:, :9]
+# y = data.iloc[:, 9:]
 
 
 
@@ -27,6 +27,7 @@ def get_move(board):
             index = i
             heighest = probabilities[i]
     return index
+
 
 def print_board(board):
     print()
